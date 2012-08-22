@@ -2,6 +2,8 @@
 
 BUILD_ROOT=`pwd`
 
+repo sync
+
 make clean
 
 . build/envsetup.sh
@@ -9,11 +11,6 @@ make clean
 lunch cm_$1-userdebug
 
 export USE_CCACHE=1
-
-if [ $1 = "d2vzw" ]; then
-export USE_KEXEC=1
-echo "using kexec"
-fi
 
 time make bacon -j8
 
