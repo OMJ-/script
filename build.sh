@@ -2,8 +2,6 @@
 
 BUILD_ROOT=`pwd`
 
-repo sync
-
 make clean
 
 . build/envsetup.sh
